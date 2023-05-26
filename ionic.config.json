@@ -1,7 +1,5 @@
 {
-  "name": "notes-vue",
-  "integrations": {
-    "capacitor": {}
-  },
+  "name": "Ionic-start",
+  "integrations": {},
   "type": "vue-vite"
 }
