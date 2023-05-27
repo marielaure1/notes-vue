@@ -1,5 +1,5 @@
 <template>
-  <ion-page>
+  <ion-page :ion-tab="false">
     <ion-header>
       <ion-toolbar class="bg-primary">
         <ion-title>Connexion</ion-title>
@@ -21,7 +21,7 @@
           </ion-item>
         </ion-list>
   
-        <ion-button expand="full" type="submit" color="primary">Se connecter</ion-button>
+        <ion-button expand="full" type="submit">Se connecter</ion-button>
         <!-- <ion-nav-link router-direction="forward" :component="register">
           <ion-button>Vous n'avez pas de compte</ion-button>
         </ion-nav-link> -->
@@ -47,6 +47,7 @@ export default {
   methods: {
      login() {
       const formData = new FormData();
+      console.log(this.email, this.password);
       formData.append('email', this.email);
       formData.append('password', this.password);
       useApiStore().login(formData).then(() => {

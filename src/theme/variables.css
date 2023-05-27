@@ -15,5 +15,34 @@ ion-input {
 }
 
 ion-button {
-  --color: #6e48c6; 
+  --background: #5b23dc; 
+  --color: #FFF;
+}
+
+
+/* .notes-note{
+  max-height: 200px;
+  overflow: hidden;
+} */
+
+a{
+  text-decoration: none;
+}
+
+ion-back-button{
+  --color: black;
+}
+
+ion-icon{
+  --color: black;
+  display: block;
+}
+
+ion-fab-button{
+  --color: black;
+}
+
+textarea{
+  background-color: #dfdfdf!important;
+  padding: 20px;
 }

@@ -2,27 +2,53 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Bienvenue sur Note</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
+          <ion-title size="large">Bienvenue dans notes</ion-title>
         </ion-toolbar>
       </ion-header>
+    
 
       <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <ion-img src="./home.jpg" alt="image scribe"></ion-img>
+        
+        <ion-button @click="login()">
+          Se connecter
+        </ion-button>
+        <ion-button @click="register()">
+          S'inscrire
+        </ion-button>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
-<script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+<script >
+import { IonHeader, IonTitle, IonToolbar, IonContent, IonNavLink, IonButton, IonLabel, IonItem, IonInput, IonList, IonPage } from '@ionic/vue';
+
+
+export default {
+  data() {
+    return {
+    };
+  },
+  components: {
+    IonHeader, IonTitle, IonToolbar, IonContent, IonNavLink, IonButton, IonLabel, IonItem, IonInput, IonList, IonPage 
+  },
+  methods: {
+    login() {
+      this.$router.push("/login");
+    },
+    register() {
+      this.$router.push("/register");
+    }
+  }
+}
 </script>
 
 <style scoped>

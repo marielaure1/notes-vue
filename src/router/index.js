@@ -4,7 +4,10 @@ import HomePage from '../views/HomePage.vue';
 import LoginPage from '../views/LoginPage.vue';
 import RegisterPage from '../views/RegisterPage.vue';
 import NotesPage from '../views/NotesPage.vue';
-// import NotePage from '../views/NotePage.vue';
+import ProfilPage from '../views/ProfilPage.vue';
+import NotePage from '../views/NotePage.vue';
+import CreatePage from '../views/CreatePage.vue';
+
 const routes = [
     {
         path: '/',
@@ -31,7 +34,7 @@ const routes = [
       meta: {
         requiresAuth: false,
         title: "Register"
-    }
+      }
     },
     {
       path: '/notes',
@@ -40,7 +43,7 @@ const routes = [
       meta: {
         requiresAuth: true,
         title: "Notes"
-    }
+      }
     },
     {
         path: '/logout',
@@ -50,15 +53,33 @@ const routes = [
           title: "Logout"
       },
     },
-    // {
-    //   path: '/notes/:id',
-    //   name: 'note',
-    //   component: NotePage,
-    //   meta: {
-    //     requiresAuth: true,
-    //     title: "Notes"
-    // }
-    // }
+    {
+      path: '/notes/:id',
+      name: 'note',
+      component: NotePage,
+      meta: {
+        requiresAuth: true,
+        title: "Note"
+      }
+    },
+    {
+      path: '/create',
+      name: 'create',
+      component: CreatePage,
+      meta: {
+        requiresAuth: true,
+        title: "Create"
+      }
+    },
+    {
+      path: '/profil',
+      name: 'profil',
+      component: ProfilPage,
+      meta: {
+        requiresAuth: true,
+        title: "profil"
+      }
+    }
 ];
 
 
